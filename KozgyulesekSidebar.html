@@ -1,0 +1,34 @@
+<style type="text/css">
+  .ui.footer.form-page {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+            
+<div class="ui container padded">
+  <h3 class="header">Meghívó</h3>
+  <button class="ui red button" onclick="google.script.run.colorMeghivoKikuldeni()">KIKÜLDENI</button>
+  <button class="ui green button" onclick="google.script.run.colorMeghivoKikuldve()">KIKÜLDVE</button>
+</div>
+<hr />
+<div class="ui container padded">
+  <h3 class="header">Jegyzőkönyv</h3>
+  <button class="ui orange button" onclick="google.script.run.colorJkvKeszul()">KÉSZÜL</button>
+  <button class="ui yellow button" onclick="google.script.run.colorJkvAlairas()">ALÁÍRÁSRA VÁR</button>
+  <button class="ui pink button" onclick="google.script.run.colorJkvKikuldeni()">KIKÜLDENI</button>
+</div>
+<hr />
+<div class="ui container padded">
+  <h3 class="header">Egyéb</h3>
+  <button class="ui basic button" onclick="google.script.run.colorReset()">RESET</button>
+</div>
+
+<div class="ui inverted vertical footer form-page segment">
+  <div class="ui container">
+    <span class="ui grey">Version 0.16</span>
+  </div>
+</div>
