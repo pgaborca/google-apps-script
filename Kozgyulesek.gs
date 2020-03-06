@@ -4,8 +4,11 @@ function onOpen() {
       .addItem('Közgyűlések menü', 'showKozgyulesekSidebar')
       .addSeparator()
       .addToUi();
+  
   showKozgyulesekSidebar();
 }
+
+// SHOW SIDEBAR
 
 function showKozgyulesekSidebar() {
   var html = HtmlService.createHtmlOutputFromFile('KozgyulesekSidebar')
@@ -15,27 +18,30 @@ function showKozgyulesekSidebar() {
       .showSidebar(html);
 }
 
+// COLOR
+
+var activeRange = SpreadsheetApp.getActive().getActiveRangeList();
 
 function colorMeghivoKikuldeni() {
-  SpreadsheetApp.getActive().getActiveRangeList().setBackground('#ff0000'); // Red
+  activeRange.setBackground('#ff0000'); // Red
 }
 
 function colorMeghivoKikuldve() {
-  SpreadsheetApp.getActive().getActiveRangeList().setBackground('#00B200'); // Green
+  activeRange.setBackground('#00B200'); // Green
 }
 
 function colorJkvKeszul() {
-  SpreadsheetApp.getActive().getActiveRangeList().setBackground('#ff9900'); // Orange
+  activeRange.setBackground('#ff9900'); // Orange
 }
 
 function colorJkvAlairas() {
-  SpreadsheetApp.getActive().getActiveRangeList().setBackground('#ffd500 '); // Yellow
+  activeRange.setBackground('#ffd500 '); // Yellow
 }
 
 function colorJkvKikuldeni() {
-  SpreadsheetApp.getActive().getActiveRangeList().setBackground('#ff00ff'); // Pink
+  activeRange.setBackground('#ff00ff'); // Pink
 }
 
 function colorReset() {
-  SpreadsheetApp.getActive().getActiveRangeList().setBackground(null); // Reset
+  activeRange.setBackground(null); // Reset
 }
